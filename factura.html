@@ -1,0 +1,95 @@
+<!--
+  Autor: [Tu Nombre]
+  Fecha: 16 de mayo de 2025
+  Descripción: Simulación de una factura/proforma en HTML usando tablas y contenedores div.
+  Reglas:
+    - Usar tablas para estructurar cada bloque de información.
+    - No incluir estilos internos ni inline; todo el estilo está en CSS externo.
+    - Código claro, indentado y comentado para fácil mantenimiento.
+-->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" /> <!-- Establece la codificación de caracteres -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/> <!-- Diseño responsive -->
+  <title>Factura / Proforma</title> <!-- Título que aparece en la pestaña del navegador -->
+
+  <!-- Enlace al archivo CSS externo -->
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+  <!-- Contenedor principal de la factura -->
+  <div class="contenedor-factura">
+
+    <!-- Tabla: Datos de la empresa -->
+    <table class="tabla empresa">
+      <tr><th colspan="2">DATOS DE LA EMPRESA</th></tr> <!-- Encabezado -->
+      <tr><td>Nombre:</td><td>Comercial e Importadora el Chukito Asado.</td></tr>
+      <tr><td>Dirección:</td><td>Av. Pedro Vicente Maldonado y Balzar, Quito</td></tr>
+      <tr><td>RUC:</td><td>1790011223001</td></tr>
+      <tr><td>Teléfono:</td><td>02-222-3344</td></tr>
+      <tr><td>Email:</td><td>importadoraChukitoAsado@gmail.com</td></tr>
+    </table>
+
+    <!-- Tabla: Datos del cliente -->
+    <table class="tabla cliente">
+      <tr><th colspan="2">DATOS DEL CLIENTE</th></tr>
+      <tr><td>Nombre:</td><td>Juan Pérez</td></tr>
+      <tr><td>Cédula/RUC:</td><td>0912345678</td></tr>
+      <tr><td>Dirección:</td><td>Cdla. Kennedy, Guayaquil</td></tr>
+      <tr><td>Teléfono:</td><td>0987654321</td></tr>
+    </table>
+
+    <!-- Tabla: Productos -->
+    <table class="tabla productos">
+      <thead>
+        <tr>
+          <th>Código</th>
+          <th>Descripción</th>
+          <th>Cantidad</th>
+          <th>Precio Unitario</th>
+          <th>Subtotal</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Fila de producto -->
+        <tr>
+          <td>001</td>
+          <td>Mouse inalámbrico</td>
+          <td>2</td>
+          <td>$10.00</td>
+          <td>$20.00</td>
+        </tr>
+        <!-- Otro producto -->
+        <tr>
+          <td>002</td>
+          <td>Teclado mecánico</td>
+          <td>1</td>
+          <td>$50.00</td>
+          <td>$50.00</td>
+        </tr>
+        <!-- Total -->
+        <tr class="total">
+          <td colspan="4">Total</td>
+          <td>$70.00</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Tabla: Información adicional y pie -->
+    <table class="tabla info-adicional">
+      <tr><th colspan="2">INFORMACIÓN ADICIONAL</th></tr>
+      <tr><td>Forma de Pago:</td><td>Transferencia Bancaria</td></tr>
+      <tr><td>Observaciones:</td><td>Entregar en 48 horas</td></tr>
+      <!-- Pie de factura -->
+      <tr>
+        <td colspan="2" class="footer">
+          ¡Gracias por su compra! Visite nuestra web: importadoraChukitoAsado@gmail.com
+        </td>
+      </tr>
+    </table>
+
+  </div>
+</body>
+</html>

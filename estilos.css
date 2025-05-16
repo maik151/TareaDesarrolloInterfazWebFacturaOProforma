@@ -1,0 +1,114 @@
+/* 
+  Autor: [Tu Nombre]
+  Fecha: 16 de mayo de 2025
+  Descripción: Estilos CSS externos para factura/proforma.
+  Paleta de colores: Celeste (#80C4B7) y Naranja (#E3856B).
+  Tipografía: Moderna y profesional.
+*/
+
+/* Importamos Google Fonts para una apariencia más ejecutiva */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto:wght@400;500&display=swap');
+
+/* Variables para colores reutilizables */
+:root {
+  --celeste: #80C4B7;
+  --naranja: #E3856B;
+  --fondo: #e4e4e4;
+  --blanco: #f4f4f4;
+  --gris: #F1F1F1;
+  --gris-texto: #4B4B4B;
+  --borde: #333333;
+}
+
+/* Estilo base del body */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--fondo);
+  color: var(--gris-texto);
+}
+
+/* Contenedor principal */
+.contenedor-factura {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: var(--blanco);
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--borde);
+}
+
+/* Estilo base para todas las tablas */
+.tabla {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Encabezado de cada tabla */
+.tabla th {
+  background: linear-gradient(90deg, var(--celeste), var(--naranja));
+  color: rgb(55, 55, 55);
+  text-align: left;
+  padding: 14px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+/* Celdas de datos */
+.tabla td {
+  padding: 14px;
+  background-color: var(--gris);
+  border-bottom: 1px solid var(--borde);
+  font-size: 15px;
+  border-radius: 0;
+}
+
+/* Filas alternas para mayor legibilidad */
+.tabla tr:nth-child(even) td {
+  background-color: #ffffff;
+}
+
+/* Tabla de productos: hace que se vea más ejecutiva */
+.tabla.productos td, .tabla.productos th {
+  text-align: center;
+}
+
+/* Fila de total con estilo diferente */
+.tabla.productos .total {
+  font-weight: bold;
+  background-color: var(--naranja);
+  color: rgb(41, 41, 41);
+}
+
+/* Pie de factura */
+.footer {
+  text-align: center;
+  padding: 18px;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 15px;
+  color: rgb(49, 49, 49);
+  background-color: var(--celeste);
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  box-shadow: inset 0 1px 3px rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+  .contenedor-factura {
+    padding: 20px;
+  }
+
+  .tabla th, .tabla td {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
